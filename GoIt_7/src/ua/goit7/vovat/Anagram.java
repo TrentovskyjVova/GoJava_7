@@ -1,4 +1,4 @@
-package ua.goit7.vovA;
+package ua.goit7.vovat;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

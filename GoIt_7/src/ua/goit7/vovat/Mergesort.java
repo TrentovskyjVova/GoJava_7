@@ -1,4 +1,4 @@
-package ua.goit7.vovA;
+package ua.goit7.vovat;
 
 import java.util.Arrays;
 import java.util.Random;
