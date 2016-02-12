@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE flow PUBLIC "-//SPRING//DTD WEBFLOW 1.0//EN"
+       "http://www.springframework.org/dtd/spring-webflow-1.0.dtd">
+ <flow start-state="displayLoginForm">
+     <view-state id="displayLoginForm" view="form">
+        <entry-actions>
+            <action bean="loginForm" method="setupForm"/>
+        </entry-actions>
+        <transition on="submit" to="processLogin">
+            <action bean="loginForm" method="bindAndValidate"/>
+        </transition>
+    </view-state>
+     <action-state id="processLogin">
+        <action bean="loginForm" method="processLogin"/>
+        <transition on="success" to="finish"/>
+    </action-state>
+     <end-state id="finish" view="success"/>
+ </flow>
